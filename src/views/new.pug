@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.container
+    h1.heading New Post
+    form(action="/post" method="POST")
+      div.form-group
+        label(for="title") Title
+        input#title(type="text" name="title" required)
+      
+      div.form-group
+        label(for="body") Content
+        textarea#body(name="body" rows="10" required)
+      
+      div.form-group
+        label(for="tags") Tags
+        input#tags(type="text" name="tags" placeholder="technology, programming, web")
+      
+      div.form-group
+        button.btn(type="submit") Create Post
+        a.btn(href="/") Cancel 

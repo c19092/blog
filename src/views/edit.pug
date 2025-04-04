@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.container
+    h1.heading Edit Post
+    form(action=`/post/${post._id}` method="POST")
+      div.form-group
+        label(for="title") Title
+        input#title(type="text" name="title" value=post.title required)
+      
+      div.form-group
+        label(for="body") Content
+        textarea#body(name="body" rows="10" required)= post.body
+      
+      div.form-group
+        label(for="tags") Tags (comma-separated)
+        input#tags(type="text" name="tags" value=post.tags.join(', ') placeholder="technology, programming, web")
+      
+      div.form-group
+        button.btn(type="submit") Update Post
+        a.btn(href=`/post/${post._id}`) Cancel 

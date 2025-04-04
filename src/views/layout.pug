@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/style.css")
+    title Blog
+  body
+    nav.navbar
+      div.container
+        a(href="/").brand Blog
+        div.links
+          a(href="/") Home
+          a(href="/post/new") New Post
+    main
+      block content
+    footer
+      div.container
+        p This web application was created to fulfill Web Technology module's requirements and does not represent an actual company or service

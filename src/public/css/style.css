@@ -1,0 +1,177 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', Roboto;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 1rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.backlink {
+    text-decoration: underline;
+    color: #333;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.post {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+}
+
+.post .btn {
+    background-color: #00318b;
+}
+
+.post .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.post .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post .tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0 !important;
+    color: #333 !important;
+    padding: 0.2rem 0.5rem !important;
+}
+
+.post .body {
+    margin-bottom: 1rem;
+}
+
+.post .info .tags a {
+    background-color: #f0f0f0 !important;
+    color: #333 !important;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;   
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group button {
+    margin-right: 1rem;
+}
+
+.form-group button:last-child {
+    margin-right: 0;
+}
+
+article .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+article .info .tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+article .body {
+    margin-bottom: 1rem;
+}
+
+article .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+

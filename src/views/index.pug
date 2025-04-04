@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div.container
+    if currentTag
+      h1.heading Posts tagged with "#{currentTag}"
+      a.backlink(href="/") Back to all posts
+    else
+      h1.heading Latest posts
+  
+  div.posts.container
+    each post in posts
+      div.post
+        h2.title
+          a(href=`/post/${post._id}`)= post.title
+        div.info
+          span= new Date(post.createdAt).toLocaleDateString()
+          if post.tags && post.tags.length
+            div.tags
+              each tag in post.tags
+                a.btn.btn-secondary(href=`/tag/${tag}`)= tag
+        div.body= post.body.substring(0, 150) + '...'
+        a(href=`/post/${post._id}`).btn.btn-primary Read more
