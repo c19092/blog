@@ -30,5 +30,5 @@ This is a simple blog app built with Express.js, MongoDB, and pug.
 
 ## Links
 
-- Github link: https://github.com/c19092/blog
-- Live demo: https://blog-m1i8.onrender.com/
+- [Github link](https://github.com/c19092/blog)
+- [Live demo](https://blog-m1i8.onrender.com/) 
