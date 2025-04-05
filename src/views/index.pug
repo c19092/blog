@@ -19,5 +19,5 @@ block content
             div.tags
               each tag in post.tags
                 a.btn.btn-secondary(href=`/tag/${tag}`)= tag
-        div.body= post.body.substring(0, 150) + '...'
+        div.body !{post.body.substring(0, 150) + '...'}
         a(href=`/post/${post._id}`).btn.btn-primary Read more

@@ -58,6 +58,8 @@ body {
 .backlink {
     text-decoration: underline;
     color: #333;
+    margin-top: 20px;
+    display: inline-block;
 }
 
 .posts {
@@ -87,7 +89,7 @@ body {
 
 .post .info {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
     margin-bottom: 1rem;
 }
@@ -113,7 +115,9 @@ body {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
     background-color: #333;
     color: white;
     font-size: 1rem;
@@ -154,6 +158,13 @@ footer {
     margin-right: 0;
 }
 
+article {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 article .info {
     display: flex;
     align-items: center;
@@ -167,7 +178,8 @@ article .info .tags {
 }
 
 article .body {
-    margin-bottom: 1rem;
+    margin: 2rem 0;
+    line-height: 1.5;
 }
 
 article .actions {
