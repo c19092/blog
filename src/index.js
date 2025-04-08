@@ -1,24 +1,27 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const path = require('path')
-const postRoutes = require('./routes/posts')
+const express = require("express");
+const mongoose = require("mongoose");
+const path = require("path");
+const postRoutes = require("./routes/posts");
 
-const app = express()
-const PORT = process.env.PORT || 3000
+require("dotenv").config();
 
-app.set('view engine', 'pug')
-app.set('views', path.join(__dirname, 'views'))
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
-app.use(express.static(path.join(__dirname, 'public')))
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
 
-app.use('/', postRoutes)
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/blog')
+app.use("/", postRoutes);
+
+mongoose
+  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/blog")
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`)
-    })
+      console.log(`Server is running on port ${PORT}`);
+    });
   })
-  .catch(err => console.error('MongoDB connection error:', err)) 
+  .catch((err) => console.error("MongoDB connection error:", err));
